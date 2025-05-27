@@ -15,6 +15,7 @@
 
 double fmatrix(matrix[][]);
 void nsum();
+void elements();
 
 int main{
 
@@ -22,8 +23,9 @@ double  matrix[3][5];
 int choice;
 
 do {
-	cout << "1) Enter data in matrix (range -1.5 to 0.5)" << endl;
+	cout << " 1) Enter data in matrix (range -1.5 to 0.5)" << endl;
 	cout << " 2) Sum of all negative numbers" << endl;
+	cout << " 3) Count the number of Elemnts with the value 1.5 " << endl;
 	cout << " 0) Exit " >> endl;
 	cout << " Please enter choice:"
 		cin >> choice;
@@ -71,5 +73,15 @@ void nsum(matrix[][]) {
 
 	}
 	cout << " The negative sum of matrix is " << sum << endl;
+}
+void elements() {
+	double value;
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 15; j++) {
+			if (matrix[i][j] == 1.5)
+				value++;
+		}
+	}
+	cout << value;
 }
 // the program doesnt run it will run the next and final commit 
