@@ -13,7 +13,7 @@
  
 // function parameters
 
-void matrix();
+double fmatrix();
 void nsum();
 
 int main{
@@ -40,8 +40,21 @@ else
 
 	return 0;
 }
-void matrix() {
-	cin >> matrix[][];
+double fmatrix(matrix[3][5]) {
 	
+	cin >> matrix[3][5];
+	
+}
+// nsum
+void nsum(matrix[][]) {
+	double sum = 0;
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; < 15; j++) {
+			if (matrix[i][j] < 0)
+				sum = sum + matrix[i][j];
+		}
+
+	}
+	cout << " The negative sum of matrix is " << sum << endl;
 }
 
