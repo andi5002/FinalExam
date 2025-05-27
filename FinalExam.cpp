@@ -5,7 +5,6 @@
 @param sums out all negative numbers
 @return matrix<code>positive</code>
 @return sum<code>negative
-
 */
 //libraries
 #include<iostream>
@@ -13,8 +12,8 @@
  
 // function parameters
 
-double fmatrix(matrix[][]);
-void nsum();
+double fmatrix(double matrix[][]);
+void nsum(double matrix[][]);
 
 int main{
 
@@ -22,16 +21,16 @@ double  matrix[3][5];
 int choice;
 
 do {
-	cout << "1) Enter data in matrix (range -1.5 to 0.5)" << endl;
+	cout << " 1) Enter data in matrix (range -1.5 to 0.5)" << endl;
 	cout << " 2) Sum of all negative numbers" << endl;
 	cout << " 0) Exit " >> endl;
 	cout << " Please enter choice:"
 		cin >> choice;
 	if (choice == 1) {
-		matrix();
+		fmatrix(double matrix[3][5]);
 	}
 	else if (choice == 2) {
-		nsum();
+		nsum(double matrix[3][5]);
 	}
 	else
 		cout << choice << " doesnt exist in the menu try again" << endl;
@@ -44,8 +43,7 @@ do {
 	return 0;
 }
 // function that takes matrix[3][5] and fills it out with data 
-// prototype
-double fmatrix(matrix[][]) {
+double fmatrix(double matrix[3][5]) {
 
 	for (int i = 0; i < 3; i++) {
 		for (int j = 0; j < 15; j++) {
@@ -60,8 +58,7 @@ double fmatrix(matrix[][]) {
 	
 }
 // sums up all of the negative number of matrix 
-// prototype
-void nsum(matrix[][]) {
+void nsum(double matrix[3][5]) {
 	double sum = 0;
 	for (int i = 0; i < 3; i++) {
 		for (int j = 0; < 15; j++) {
@@ -72,4 +69,4 @@ void nsum(matrix[][]) {
 	}
 	cout << " The negative sum of matrix is " << sum << endl;
 }
-// the program doesnt run it will run the next and final commit 
+
